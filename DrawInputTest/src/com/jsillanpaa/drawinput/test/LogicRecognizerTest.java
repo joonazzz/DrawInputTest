@@ -60,11 +60,11 @@ public class LogicRecognizerTest extends AndroidTestCase {
 		
 		HwrStroke stroke3 = new HwrStroke(1);
 		stroke3.points.add(new PointF(100f, 100f));
-		stroke3.points.add(new PointF(80f, 100f));
+		stroke3.points.add(new PointF(80f, 200f));
 		stroke3.points.add(new PointF(20f, 25f));
 		
-		assertEquals(1.0f, mLogicRecognizer.isDiagonalLine(stroke1,true));
-		assertEquals(-1.0f, mLogicRecognizer.isDiagonalLine(stroke2,true));
+		assertEquals(-1.0f, mLogicRecognizer.isDiagonalLine(stroke1,true));
+		assertEquals(1.0f, mLogicRecognizer.isDiagonalLine(stroke2,true));
 		assertEquals(0.0f, mLogicRecognizer.isDiagonalLine(stroke3,true));
 	}
 	public void testCrossNearCenter() throws Exception {
